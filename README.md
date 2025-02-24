@@ -8,9 +8,7 @@
 <p><code>composer install</code></p>
 
 <p>2. Настроить окружение</p>
-<p><pre>DB_DATABASE=new_taskmanager
-DB_USERNAME=root
-DB_PASSWORD=87654321</pre></p>
+![Снимок экрана от 2025-02-24 18-50-50](https://github.com/user-attachments/assets/b5bc6e77-1d65-4e0f-b873-326cf285cb10)
 
 <p>3. Выполнить миграции</p>
 <p><code>php artisan migrate --seed</code></p>
