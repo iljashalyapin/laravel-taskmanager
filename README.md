@@ -8,7 +8,9 @@
 <p><code>composer install</code></p>
 
 <p>2. Настроить окружение</p>
-![Снимок экрана от 2025-02-24 18-50-50](https://github.com/user-attachments/assets/b5bc6e77-1d65-4e0f-b873-326cf285cb10)
+x-special/nautilus-clipboard
+cut
+file:///home/ubuntu/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/screenshot
 
 <p>3. Выполнить миграции</p>
 <p><code>php artisan migrate --seed</code></p>
