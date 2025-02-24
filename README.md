@@ -18,4 +18,6 @@ DB_PASSWORD=87654321</pre></p>
 <p>4. Запустить приложение</p>
 <p><code>php artisan serve</code></p>
 
+<h3>Сторонние библиотеки:</h3>
+<p><b>irazasyed/telegram-bot-sdk</b> - использован для отправки сообщений через Telegram API</p>
 
