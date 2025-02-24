@@ -9,9 +9,9 @@
 
 <p>2. Настроить окружение</p>
 
-DB_DATABASE=new_taskmanager
+<p><pre>DB_DATABASE=new_taskmanager
 DB_USERNAME=root
-DB_PASSWORD=87654321
+DB_PASSWORD=87654321</pre></p>
 
 <p>3. Выполнить миграции</p>
 <p><code>php artisan migrate --seed</code></p>
