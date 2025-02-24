@@ -46,7 +46,7 @@ class UpdateTask extends React.Component {
                 </div>
                 <label>Change comment for task:</label>
                 <br/>
-                <textarea id="comment" disabled></textarea>
+                <textarea maxLength={254} id="comment" placeholder="4-254 symbols" disabled></textarea>
                 <br/><br/>
                 <label>Change status for task:</label>
                 <br/>
@@ -54,7 +54,7 @@ class UpdateTask extends React.Component {
                 <br/><br/>
                 <label>Change attachments for task:</label>
                 <br/>
-                <textarea id="attachments" disabled></textarea>
+                <textarea maxLength={254} id="attachments" placeholder="Input the absolute file paths separated by a character ';'" disabled></textarea>
                 <br/><br/>
                 <label>Change executor for task:</label>
                 <br/>

@@ -42,11 +42,11 @@ class UpdateUser extends React.Component {
                 </div>
                 <label>Change Chat ID for user:</label>
                 <br/>
-                <input id="chat_id" disabled/>
+                <input maxLength={16} id="chat_id" placeholder="8-16 symbols" disabled/>
                 <br/><br/>
                 <label>Change password for user:</label>
                 <br/>
-                <input type="password" id="password" disabled/>
+                <input maxLength={16} type="password" id="password" placeholder="8-16 symbols" disabled/>
                 <br/><br/>
                 <button class="btn_save" disabled>Save</button>
                 <br/><br/>

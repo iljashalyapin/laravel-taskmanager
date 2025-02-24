@@ -90,10 +90,10 @@
             @csrf
             <h2>Login</h2>
             <div class="form-group">
-                <input class="form-control item" type="text" name="username" minlength="4" id="username" placeholder="Username" required>
+                <input class="form-control item" type="text" name="username" minlength="4" maxlength="16" id="username" placeholder="Username" required>
             </div>
             <div class="form-group">
-                <input class="form-control item" type="password" name="password" minlength="8" id="password" placeholder="Password" required>
+                <input class="form-control item" type="password" name="password" minlength="8" maxlength="16" id="password" placeholder="Password" required>
             </div>
             <div class="form-group">
                 <label class="checkbox_label">

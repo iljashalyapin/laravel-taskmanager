@@ -25,13 +25,13 @@ class AddTask extends React.Component {
                 <div class="task">
                     <label>Input name of task:</label>
                     <br/>
-                    <input id="taskname"></input>
+                    <input maxLength={254} id="taskname" placeholder="4-254 symbols"></input>
                     <br/>
                     <label id="taskname_error"></label>           
                 </div>
                 <label>Add comment for task:</label>
                 <br/>
-                <textarea id="comment">-</textarea>
+                <textarea maxLength={254} id="comment" placeholder="4-254 symbols"></textarea>
                 <br/><br/>
                 <label>Set status for task:</label>
                 <br/>
@@ -45,7 +45,7 @@ class AddTask extends React.Component {
                 <br/><br/>
                 <label>Add attachments for task:</label>
                 <br/>
-                <textarea id="attachments">Input the absolute file paths separated by a character ";"</textarea>
+                <textarea maxLength={254} id="attachments" placeholder="Input the absolute file paths separated by a character ';'"></textarea>
                 <br/><br/>
                 <label>Set executor for task:</label>
                 <br/>
@@ -100,23 +100,27 @@ function Add_task() {
 		        // Запись в БД
 		        let new_id = parseInt(last_id) + 1;
 		        let new_taskname = document.getElementById('taskname').value;
-		        let new_comment = document.getElementById('comment').value;
-		        let new_status = document.getElementById('status').value;
-		        let new_attachments = document.getElementById('attachments').value;
-		        let new_executor = document.getElementById('executor').value;
-		        var new_data = {
-		            id: new_id,
-		            taskname: new_taskname,
-		            comment: new_comment,
-		            status: new_status,
-		            attachments: new_attachments,
-		            executor: new_executor
-		        };
-		        let res2 = axios.post('/addTask', JSON.stringify(new_data), { headers: { 'Content-Type' : 'application/json' } })
-		        .then(res2 => {
-                    Show_tasks();
-                })
-		        .catch(function (error) { console.log(error.message); });
+                if (!new_taskname || new_taskname.length == 0)
+                    document.getElementById('taskname_error').innerText = "Taskname is empty.";
+                else {
+                    let new_comment = document.getElementById('comment').value;
+                    let new_status = document.getElementById('status').value;
+                    let new_attachments = document.getElementById('attachments').value;
+                    let new_executor = document.getElementById('executor').value;
+                    var new_data = {
+                        id: new_id,
+                        taskname: new_taskname,
+                        comment: new_comment,
+                        status: new_status,
+                        attachments: new_attachments,
+                        executor: new_executor
+                    };
+                    let res2 = axios.post('/addTask', JSON.stringify(new_data), { headers: { 'Content-Type' : 'application/json' } })
+                    .then(res2 => {
+                        Show_tasks();
+                    })
+                    .catch(function (error) { console.log(error.message); });
+                }
             }
         });
     }));
