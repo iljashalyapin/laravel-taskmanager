@@ -5,17 +5,17 @@
 <h3>Для запуска проекта необходимо:</h3>
 
 <p>1. Запустить установку пакетов через composer</p>
-<p><code>composer install</code><br></p>
+<p><code>composer install</code></p>
 
 <p>2. Настроить окружение</p>
-<p><code>DB_DATABASE=new_taskmanager</code><br>
-<code>DB_USERNAME=root</code><br>
-<code>DB_PASSWORD=87654321</code></p>
+<p><pre>DB_DATABASE=new_taskmanager
+DB_USERNAME=root
+DB_PASSWORD=87654321</pre></p>
 
 <p>3. Выполнить миграции</p>
-<code>php artisan migrate --seed</code><br>
+<p><code>php artisan migrate --seed</code></p>
 
 <p>4. Запустить приложение</p>
-<code>php artisan serve</code>
+<p><code>php artisan serve</code></p>
 
 
