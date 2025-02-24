@@ -8,7 +8,7 @@
 <p><code>composer install</code></p>
 
 <p>2. Настроить окружение</p>
-```dotenv
+
 DB_DATABASE=new_taskmanager
 DB_USERNAME=root
 DB_PASSWORD=87654321
