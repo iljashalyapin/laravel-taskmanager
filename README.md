@@ -7,13 +7,16 @@
 <p>1. Запустить установку пакетов через composer</p>
 <code>composer install</code>
 
+
 <p>2. Настроить окружение</p>
 <code>DB_DATABASE=new_taskmanager</code>
 <code>DB_USERNAME=root</code>
 <code>DB_PASSWORD=87654321</code>
 
+
 <p>3. Выполнить миграции</p>
 <code>php artisan migrate --seed</code>
+
 
 <p>4. Запустить приложение</p>
 <code>php artisan serve</code>
